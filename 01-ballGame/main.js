@@ -4,21 +4,20 @@ var enableDebugMode = function (game, enable) {
   }
 }
 
-function __initScene(g) {
-  console.log('init scene...', g)
-  let scene = new SceneTitle(g)
-  g.runWithScene(scene)
+function __initScene(game) {
+  console.log('init scene...', game)
+  let scene = new SceneTitleStart({game})
+  game.registerAction('k', function () {
+    let scene = FillMainScene(game)
+    game.replaceScene(scene)
+  })
+  game.runWithScene(scene)
 }
 
 let __main = function () {
-  let images = {
-    ball: 'img/ball.png',
-    block: 'img/block.png',
-    paddle: 'img/paddle.png'
-  }
   let params = {
-    fps: 30,
-    images,
+    fps: conf.fps,
+    images: conf.images,
     ndCanvas: document.querySelector('#ball-game-canvas'),
     funCallback: __initScene
   }

@@ -11,8 +11,8 @@
         }
         .game-container{
             border:1px solid #ccc;
-            width:400px;
-            height:300px;
+            width:500px;
+            height:400px;
 
             position:absolute;
             top:0;left:0;right:0;bottom:0;
@@ -27,16 +27,23 @@
 </head>
 <body>
 <div class="game-container">
-    <canvas id="ball-game-canvas" width="400" height="300"></canvas>
+    <canvas id="ball-game-canvas" width="500" height="400"></canvas>
 </div>
 
 <!--<script src="../lib/jquery-1.11.3.min.js"></script>-->
 <script src="base/utils.js"></script>
+<script src="conf/conf.js"></script>
 <script src="base/baseScene.js"></script>
 <script src="base/baseGame.js"></script>
 
+<script src="scene/main/paddle.js"></script>
+<script src="scene/main/block.js"></script>
+<script src="scene/main/ball.js"></script>
 <script src="scene/main/scene.js"></script>
+
 <script src="scene/title/sceneTitle.js"></script>
+<script src="scene/title/start/sceneStart.js"></script>
+<script src="scene/title/end/sceneEnd.js"></script>
 
 <script src="main.js"></script>
 <script>

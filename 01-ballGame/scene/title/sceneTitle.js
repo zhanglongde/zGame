@@ -1,14 +1,16 @@
 class SceneTitle extends ZScene {
-  constructor(game) {
+  constructor({game, title, font = "10px serif", x, y, callback}) {
     super(game)
-    game.registerAction('k', function () {
-      var s = Scene(game)
-      game.replaceScene(s)
-    })
+    this.title = title
+    this.font = font
+    this.x = x
+    this.y = y
+    if (typeof callback === 'function') {
+      callback()
+    }
   }
   draw() {
-//     console.log('按 k 开始游戏', this.game.context)
-    this.game.context.font = "10px serif"
-    this.game.context.fillText('按 k 开始游戏', 100, 100)
+    this.game.context.font = this.font
+    this.game.context.fillText(this.title, this.x, this.y)
   }
 }
