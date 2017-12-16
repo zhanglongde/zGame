@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ball game</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .game-container{
+            border:1px solid #ccc;
+            width:400px;
+            height:300px;
+
+            position:absolute;
+            top:0;left:0;right:0;bottom:0;
+            margin:auto;
+        }
+        #ball-game-canvas{
+            /*产生拉伸*/
+            /*width:400px;*/
+            /*height:300px;*/
+        }
+    </style>
+</head>
+<body>
+<div class="game-container">
+    <canvas id="ball-game-canvas" width="400" height="300"></canvas>
+</div>
+
+<!--<script src="../lib/jquery-1.11.3.min.js"></script>-->
+<script src="base/utils.js"></script>
+<script src="base/baseScene.js"></script>
+<script src="base/baseGame.js"></script>
+
+<script src="scene/main/scene.js"></script>
+<script src="scene/title/sceneTitle.js"></script>
+
+<script src="main.js"></script>
+<script>
+
+</script>
+</body>
+</html>
